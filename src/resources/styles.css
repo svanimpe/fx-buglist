@@ -1,0 +1,50 @@
+/*
+ * This is just a quick example of how CSS is used in JavaFX.
+ */
+
+/*
+ * The AnchorPane used for the header has an id 'header' assigned to it and is styled using CSS.
+ */
+
+#header
+{   
+    -fx-background-color: linear-gradient(to top, #ffffff, #cccccc);
+}
+
+/*
+ * Every button automatically has the style class 'button'.
+ * We use this to give our buttons a custom style.
+ */
+
+.button
+{
+    -fx-background-color: 
+        #707070,
+        linear-gradient(#fcfcfc, #f3f3f3),
+        linear-gradient(#f2f2f2 0%, #ebebeb 49%, #dddddd 50%, #cfcfcf 100%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-padding: 3 30 3 30;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+
+/*
+ * Pseudo-classes can be used as well.
+ */
+
+.button:hover
+{
+    -fx-background-color: 
+        #707070,
+        linear-gradient(#fcfcfc, #f3f3f3),
+        linear-gradient(#f2f2f8 0%, #ebebf5 49%, #ddddee 50%, #cfcfe7 100%);
+}
+
+.button:hover:pressed
+{
+    -fx-background-color: 
+        #303030,
+        linear-gradient(#f3f3f3, #fcfcfc),
+        linear-gradient(#cfcfe7 0%, #ddddee 49%, #ebebf5 50%, #f2f2f8 100%);
+}

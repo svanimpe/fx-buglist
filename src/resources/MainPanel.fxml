@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="app.MainPanelController">
+  <bottom>
+    <ToolBar>
+      <items>
+        <Label text="Actions:" />
+        <Button fx:id="previousBtn" mnemonicParsing="false" onAction="#onPrevious" text="Previous" />
+        <Button id="next" fx:id="nextBtn" mnemonicParsing="false" onAction="#onNext" text="Next" />
+        <Button mnemonicParsing="false" onAction="#onDelete" text="Delete" />
+        <Button mnemonicParsing="false" onAction="#onNew" text="New" />
+      </items>
+    </ToolBar>
+  </bottom>
+  <center>
+    <GridPane hgap="10.0" vgap="10.0">
+      <children>
+        <Label text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="Submitter:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="id" disable="true" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="submitter" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextArea fx:id="description" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="-1.0" />
+        <ColumnConstraints hgrow="ALWAYS" minWidth="-Infinity" prefWidth="-1.0" />
+      </columnConstraints>
+      <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </padding>
+      <rowConstraints>
+        <RowConstraints minHeight="-Infinity" prefHeight="-1.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="-Infinity" prefHeight="-1.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="-Infinity" prefHeight="-1.0" valignment="TOP" vgrow="ALWAYS" />
+      </rowConstraints>
+    </GridPane>
+  </center>
+  <stylesheets>
+    <URL value="@styles.css" />
+  </stylesheets>
+  <top>
+    <AnchorPane id="header" prefHeight="-1.0" prefWidth="-1.0">
+      <children>
+        <ImageView fitHeight="0.0" fitWidth="0.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+          <image>
+            <Image url="@bug.png" />
+          </image>
+        </ImageView>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bug Details" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+          <font>
+            <Font name="System Bold" size="32.0" />
+          </font>
+        </Text>
+      </children>
+    </AnchorPane>
+  </top>
+</BorderPane>
